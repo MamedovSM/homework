@@ -9,7 +9,6 @@ module.exports = {
   pswdField: {xpath: '//*[@id="input-password"]'},
   pswdConfirmField: {xpath: '//*[@id="input-confirm"]'},
   subscribeYesButton: {xpath: '//*[@id="content"]/form/fieldset[3]/div/div/label[1]'},
-  subscribeNoButton: {xpath: '//*[@id="content"]/form/fieldset[3]//div/label[2]'},
   agreePrivacyPolicy: {xpath: '//*[@id="content"]/form/div/div/input[1]'},
   confirmButton: {xpath: '//*[@id="content"]/form//div/input[2]'},
   
@@ -26,10 +25,6 @@ module.exports = {
     I.fillField(this.pswdConfirmField, user.pswd);
   },
 
-  clickSubscribeNo() {
-    I.click(this.subscribeNoButton);
-  },
-
   clickSubscribeYes() {
     I.click(this.subscribeYesButton);
   },
@@ -44,8 +39,7 @@ module.exports = {
 
   verifySuccessRegPage() {
     I.see('Your Account Has Been Created!');
-  },
-  
+  }, 
 }
 
 

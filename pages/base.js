@@ -11,8 +11,4 @@ module.exports = {
   clickMyRegLink(){
     I.click(this.regLink);
   },
-  
-  
-
-  // insert your locators and methods here
 }

@@ -15,7 +15,6 @@ Scenario('register user',  ({ I, basePage, registerPage }) => {
     registerPage.verifyRegPage();
     registerPage.fillNewUserForm(NEW_USER);
     registerPage.clickSubscribeYes();
-    registerPage.clickSubscribeNo();
     registerPage.clickPrivacyPolicy();
     registerPage.clickConfirmButton();
     registerPage.verifySuccessRegPage();
