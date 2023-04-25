@@ -8,9 +8,9 @@ module.exports = {
   telephoneField: {xpath: '//*[@id="input-telephone"]'},
   pswdField: {xpath: '//*[@id="input-password"]'},
   pswdConfirmField: {xpath: '//*[@id="input-confirm"]'},
-  subscribeYesButton: {xpath: '//*[@id="content"]/form/fieldset[3]/div/div/label[1]'},
-  agreePrivacyPolicy: {xpath: '//*[@id="content"]/form/div/div/input[1]'},
-  confirmButton: {xpath: '//*[@id="content"]/form//div/input[2]'},
+  subscribeYesButton: {xpath: '//input[@id="newsletter1"]/following::label[1]'},
+  agreePrivacyPolicy: {xpath: '//div[@class="pull-right"]/input[1]'},
+  confirmButton: {xpath: '//div[@class="pull-right"]/input[2]'},
   
   verifyRegPage() {
     I.see('Register Account');

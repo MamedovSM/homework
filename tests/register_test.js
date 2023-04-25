@@ -9,7 +9,7 @@ const NEW_USER = {
 };
 
 Scenario('register user',  ({ I, basePage, registerPage }) => {
-    I.amOnPage('http://opencart.qatestlab.net/');
+    I.openStore();
     basePage.clickMyAccountButton();
     basePage.clickMyRegLink();
     registerPage.verifyRegPage();
@@ -18,6 +18,7 @@ Scenario('register user',  ({ I, basePage, registerPage }) => {
     registerPage.clickPrivacyPolicy();
     registerPage.clickConfirmButton();
     registerPage.verifySuccessRegPage();
+    pause();
     
 });
 
