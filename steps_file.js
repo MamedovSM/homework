@@ -40,6 +40,7 @@ module.exports = function() {
       while (await this.grabNumberOfVisibleElements(removeButton)) {
         this.click(removeButton);
         count--
+        this.wait(2)
 
       }
     },
