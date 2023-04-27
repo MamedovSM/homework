@@ -7,10 +7,8 @@ module.exports = {
   addToCartButton: {xpath: '//button[@id="button-cart"]'},
   productPrice: {xpath: '//div[@class="price"]/span[1]'},
   optionPrice: {xpath:'//div[@id="product"]//a[@class="sbSelector"]'},
-  totalPrice: {xpath: '//td[.="Total:"]/following-sibling::td'},
-  shippingPrice: {xpath: '//td[.="Flat Shipping Rate:"]/following-sibling::td'},
-
-  productChoice(){
+  
+  addProductToCart(){
     I.amOnPage(BUY_PRODUCT);
     I.click(this.selectButton);
     I.click(this.selectColour);
@@ -27,15 +25,9 @@ module.exports = {
     return await I.parsePrice(grabOptionPrice); 
   },
 
-  async getTotalPrice(){
-    const grabTotalPrice = await I.grabTextFrom(this.totalPrice);
-    return await I.parsePrice(grabTotalPrice);
-  },
+  
 
-  async getShippingPrice(){
-    const grabShippingPrice = await I.grabTextFrom(this.shippingPrice);
-    return await I.parsePrice(grabShippingPrice);
-  },
+  
 
 
 }

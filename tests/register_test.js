@@ -18,7 +18,6 @@ Scenario('register user',  ({ I, basePage, registerPage }) => {
     registerPage.clickPrivacyPolicy();
     registerPage.clickConfirmButton();
     registerPage.verifySuccessRegPage();
-    pause();
     
 });
 
