@@ -16,8 +16,8 @@ Scenario.only ('buy product', async ({ I, basePage, productPage, checkoutPage,  
     I.login(USER);
     await basePage.removeItem();
     productPage.productChoice();
-    await productPage.getProductPrice();
-    await productPage.getOptionPrice();
+    const product_price = await productPage.getProductPrice();
+    const option_price = await productPage.getOptionPrice();
     basePage.clickCartIcon();
     basePage.clickCartCheckout();
     checkoutPage.verifyCheckoutPage();
@@ -36,7 +36,7 @@ Scenario.only ('buy product', async ({ I, basePage, productPage, checkoutPage,  
     checkoutPage.clickContinue();
     await productPage.getShippingPrice();
     await productPage.getTotalPrice();
-    await productPage.priceComparison();
+    I.assertEqual(product_price + option_price + await productPage.getShippingPrice(), await productPage.getTotalPrice(), "Prices are not in match");
     checkoutPage.clickPlaceOrder();
     checkoutPage.verifyPlaceOrderPage();
 });
