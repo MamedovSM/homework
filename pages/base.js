@@ -27,15 +27,9 @@ module.exports = {
 
   async removeItem(){
     I.amOnPage(cartCheckout);
-    I.wait(1);
     
-    if (await I.grabNumberOfVisibleElements(this.removeButton)){
-      while (await I.grabNumberOfVisibleElements(this.removeButton)) {
-        I.click(this.removeButton);
-        I.wait(1);
-      }
-    }else if (await I.grabTitle('Your shopping cart is empty!')){
-      console.log('Your shopping cart is empty!')
+    while (await I.grabNumberOfVisibleElements(this.removeButton)) {
+      I.click(this.removeButton);
     }
   },
   

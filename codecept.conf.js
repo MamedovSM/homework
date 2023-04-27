@@ -37,8 +37,6 @@ exports.config = {
 
     productPage: "./pages/product.js",
 
-    pricePage: "./pages/price.js",
-
     checkoutPage: "./pages/checkout.js",
   },
   name: 'homework'
