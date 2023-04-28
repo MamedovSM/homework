@@ -13,8 +13,14 @@
     "devDependencies": {
         "@codeceptjs/configure": "^0.10.0",
         "@codeceptjs/examples": "^1.2.1",
-        "@codeceptjs/ui": "^0.5.0",
+        "@codeceptjs/ui": "^0.3.2",
         "codeceptjs": "^3.4.1",
         "playwright": "^1.32.3"
+    },
+    "dependencies": {
+        "-": "^0.0.1",
+        "chai": "^4.3.7",
+        "codeceptjs-chai": "^2.3.5",
+        "install": "^0.13.0"
     }
 }

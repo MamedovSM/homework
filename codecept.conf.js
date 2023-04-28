@@ -20,14 +20,24 @@ exports.config = {
       waitForTimeout: 5000,
       show: true,
       browser: 'chromium'
-    }
+    },
+    "ChaiWrapper": {
+      "require": "codeceptjs-chai"
+    },
+    Parsing: {
+      require: './parsing_helper.js',
+    },
   },
   include: {
     I: './steps_file.js',
 
     basePage: "./pages/base.js",
 
-    registerPage: "./pages/register.js"
+    registerPage: "./pages/register.js",
+
+    productPage: "./pages/product.js",
+
+    checkoutPage: "./pages/checkout.js",
   },
   name: 'homework'
 }
